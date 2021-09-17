@@ -19,6 +19,7 @@ class FriendsController < ApplicationController
 
   # POST /friends or /friends.json
   def create
+    puts params.to_unsafe_h
     @friend = Friend.new(friend_params)
 
     respond_to do |format|
